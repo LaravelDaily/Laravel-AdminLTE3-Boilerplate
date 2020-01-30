@@ -11,6 +11,13 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">{{ trans('global.reset_password') }}</p>
+
+            @if(session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('password.email') }}">
                 {{ csrf_field() }}
                 <div>
