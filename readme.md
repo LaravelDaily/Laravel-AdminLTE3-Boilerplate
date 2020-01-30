@@ -13,6 +13,8 @@ From that boilerplate you can manually create more CRUDs, assign permissions etc
 
 __Notice__: AdminLTE 3 version was not released officially. At the time of writing (April 2019), the latest was [v3.0.0-Alpha 2 release in May 2018](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.0.0-alpha.2). But, at current alpha state, the theme is good enough to use for simple CRUDs like ours.
 
+
+
 ## Screenshots
 
 ![Laravel + AdminLTE3 screenshot 01](https://laraveldaily.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-16-at-11.25.35-AM.png)
@@ -23,7 +25,12 @@ __Notice__: AdminLTE 3 version was not released officially. At the time of writi
 
 ![Laravel + AdminLTE3 screenshot 04](https://laraveldaily.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-16-at-10.27.20-AM.png)
 
-## How to use
+
+## Setting Up
+1. Copy .env.example contents into .env
+2. If the `data` directory doesn't exist under `(storage/framework/cache/data)`, then you will have this error. `This data directory doesn't exist by default on a fresh/new installation.`
+    - Creating the data directory manually at `(storage/framework/cache)` should fix this issue.
+      cd
 
 - Clone the repository with __git clone__
 - Copy __.env.example__ file to __.env__ and edit database credentials there
