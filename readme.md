@@ -13,8 +13,6 @@ From that boilerplate you can manually create more CRUDs, assign permissions etc
 
 __Notice__: AdminLTE 3 version was not released officially. At the time of writing (April 2019), the latest was [v3.0.0-Alpha 2 release in May 2018](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.0.0-alpha.2). But, at current alpha state, the theme is good enough to use for simple CRUDs like ours.
 
-
-
 ## Screenshots
 
 ![Laravel + AdminLTE3 screenshot 01](https://laraveldaily.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-16-at-11.25.35-AM.png)
@@ -25,12 +23,7 @@ __Notice__: AdminLTE 3 version was not released officially. At the time of writi
 
 ![Laravel + AdminLTE3 screenshot 04](https://laraveldaily.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-16-at-10.27.20-AM.png)
 
-
-## Setting Up
-1. Copy .env.example contents into .env
-2. If the `data` directory doesn't exist under `(storage/framework/cache/data)`, then you will have this error. `This data directory doesn't exist by default on a fresh/new installation.`
-    - Creating the data directory manually at `(storage/framework/cache)` should fix this issue.
-      cd
+## How to use
 
 - Clone the repository with __git clone__
 - Copy __.env.example__ file to __.env__ and edit database credentials there
@@ -52,29 +45,3 @@ Basically, feel free to use and re-use any way you want.
 - FREE E-book: [50 Laravel Quick Tips (and counting)](https://laraveldaily.com/free-e-book-40-laravel-quick-tips-and-counting/)
 - Subscribe to our [YouTube channel Laravel Business](https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA)
 - Enroll in our [Laravel Online Courses](https://laraveldaily.teachable.com/)
-
-
-# Upgrade Log
-## Upgrading From Laravel 6.x to 7.x
-1. `sudo rm -rfv vendor/` 
-   - To remove downloaded dependencies, execute this inside app base dir;\
-2. `sudo rm -rfv composer.lock` 
-   - To remove previously locked versions of the composer dependencies
-3. **Updating Dependencies:** 
-   - Follow all instructions from the documentation to the dot in renaming your required dependencies as specified by the Laravel Framework. Click & Follow the link Below: [https://laravel.com/docs/7.x/upgrade](https://laravel.com/docs/7.x/upgrade)
-   - run `composer upgrade`
-   - there is an error that came from the updating depencies in composer and this is how you solve that error:
-     1. In `App\Exceptions\Handler`:
-        - add `Use Throwable;`,
-        - change methods to accept instances of `Throwable` instead of `Exceptions` as follows:
-          - `public function report(Throwable $exception);`,
-          - `public function render($request, Throwable $exception);`,
-     2. In `config\session.php`:
-        - `'secure' => env('SESSION_SECURE_COOKIE', null)`,
-     3. Then run:
-        - `sudo rm -rfv vendor/`
-        - `sudo rm -rfv composer.lock`
-        - `composer upgrade`
-
-
-
