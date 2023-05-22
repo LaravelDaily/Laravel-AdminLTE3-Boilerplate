@@ -1,11 +1,16 @@
 <?php
 
-Route::group(['prefix' => 'v1', 'as' => 'admin.', 'namespace' => 'Api\V1\Admin'], function () {
-    Route::apiResource('permissions', 'PermissionsApiController');
+use App\Http\Controllers\Api\V1\Admin\PermissionsApiController;
+use App\Http\Controllers\Api\V1\Admin\ProductsApiController;
+use App\Http\Controllers\Api\V1\Admin\RolesApiController;
+use App\Http\Controllers\Api\V1\Admin\UsersApiController;
 
-    Route::apiResource('roles', 'RolesApiController');
+Route::group(['prefix' => 'v1', 'as' => 'admin.'], function () {
+    Route::apiResource('permissions', PermissionsApiController::class);
 
-    Route::apiResource('users', 'UsersApiController');
+    Route::apiResource('roles', RolesApiController::class);
 
-    Route::apiResource('products', 'ProductsApiController');
+    Route::apiResource('users', UsersApiController::class);
+
+    Route::apiResource('products', ProductsApiController::class);
 });

@@ -32,9 +32,9 @@ return [
 
     /*
      * Which headers to use to detect proxy related data (For, Host, Proto, Port)
-     * 
+     *
      * Options include:
-     * 
+     *
      * - Illuminate\Http\Request::HEADER_X_FORWARDED_ALL (use all x-forwarded-* headers to establish trust)
      * - Illuminate\Http\Request::HEADER_FORWARDED (use the FORWARDED header to establish trust)
      * - Illuminate\Http\Request::HEADER_X_FORWARDED_AWS_ELB (If you are using AWS Elastic Load Balancer)
@@ -42,9 +42,9 @@ return [
      * - 'HEADER_X_FORWARDED_ALL' (use all x-forwarded-* headers to establish trust)
      * - 'HEADER_FORWARDED' (use the FORWARDED header to establish trust)
      * - 'HEADER_X_FORWARDED_AWS_ELB' (If you are using AWS Elastic Load Balancer)
-     * 
+     *
      * @link https://symfony.com/doc/current/deployment/proxies.html
      */
-    'headers' => Illuminate\Http\Request::HEADER_X_FORWARDED_ALL,
+    'headers' => Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED,
 
 ];
