@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyRoleRequest;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
-use App\Permission;
-use App\Role;
+use App\Models\Permission;
+use App\Models\Role;
 
 class RolesController extends Controller
 {
